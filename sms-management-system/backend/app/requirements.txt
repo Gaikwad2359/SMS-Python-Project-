@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pymongo
+mysql-connector-python
+prometheus-client
+python-jose
+requests
