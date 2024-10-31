@@ -20,7 +20,6 @@ git clone <repository-url>
 cd sms-management-system
 
  2. Backend Setup
-
 Navigate to the backend directory and install the necessary dependencies:
 
 cd backend
@@ -66,3 +65,36 @@ Contributing
 3) Commit your changes (git commit -m 'Add some feature').
 4) Push to the branch (git push origin feature/YourFeature).
 5) Open a pull request.
+
+
+sms-management-system/
+├── backend/                    # Backend application folder
+│   ├── app/
+│   │   ├── main.py             # Main entry point for the FastAPI application
+│   │   ├── routes/             # Folder for route definitions
+│   │   │   ├── auth.py         # Authentication routes
+│   │   │   ├── sms_control.py   # Routes for SMS management
+│   │   │   ├── metrics.py       # Routes for metrics display
+│   │   │   └── country_operator.py # Routes for country-operator management
+│   │   └── models/             # Database models
+│   │       └── user.py         # User model
+│   ├── requirements.txt        # Python dependencies
+│   └── Dockerfile              # Backend Docker configuration
+│
+├── frontend/                   # Frontend application folder
+│   ├── src/
+│   │   ├── components/         # React components
+│   │   │   ├── Dashboard.js     # Real-time metrics display
+│   │   │   ├── ProgramControl.js # Program start/stop/restart
+│   │   │   ├── CountryOperator.js # Manage country-operator pairs
+│   │   │   └── Login.js         # Login page
+│   │   ├── services/           # Axios API calls
+│   │   │   └── api.js          # API service file
+│   │   └── App.js              # Main app component
+│   ├── Dockerfile               # Frontend Docker configuration
+│   └── package.json             # Frontend dependencies
+│
+├── docker-compose.yml           # Docker setup for orchestrating frontend, backend, and databases
+├── prometheus.yml               # Prometheus configuration file for monitoring
+└── README.md                    # Project documentation
+
